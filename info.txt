@@ -1,0 +1,77 @@
+import { useState } from "react"
+const NavBar = ()=>{
+
+    const [escrito, setEscrito] = useState()
+    const irEscribiendo = (e)=>{
+        console.log(e.target.value)
+       setEscrito(e.target.value)
+    }
+
+    return(
+        <nav>
+            <p>Icono</p>
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <p>logoCarrito</p>
+            <input onChange={irEscribiendo}></input>
+            {escrito}
+            <button>Enviar</button>
+        </nav>
+    )
+}
+export default NavBar
+
+
+
+
+setTimeout(()=>{
+        console.log("a")
+    },[3000])
+
+
+
+a cada componente de <Route> (componente)  </Route> le llegan 3 props :
+        match: si hay partes variables
+        location: donde estas parado
+        history: acceso a la api de history para poder ir para atras, para adelante, etc = USEPARAMS
+
+        SI yo pongo una ruta asi:
+            <Route path="..." component={ItemListContainer}>
+            entonces... al componente le llegan los 3 props por parametros, es decir yo los podria usar asi
+
+            const ItemListContainer = ({match, location, history})
+
+
+        SI yo lo pongo asi:
+            <Route path="...">   <ItemListContainer/>   </Route>
+            entonces... al componente no le llegan los props, por eso si los quiero usar tendria que usar HOOKS
+
+
+--------------Esto funciona
+
+
+import mock from "../mock.json"
+import { useState, useEffect } from "react"
+import ItemList from "./ItemList"
+import { useParams } from "react-router"
+const ItemListContainer = ()=>{
+    const params = useParams()
+    console.log("se monto ItemListContainer")
+    
+    const [item, setItem]=useState([])
+    useEffect(()=>{
+        console.log("se cargo el useeffect")
+        const promise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve(mock)
+            },(2000))
+        })
+        promise.then(b=>{setItem(b)})
+    },[params.id])
+    return (
+        <div>
+            <ItemList propItem={item}/>
+        </div>
+    )
+}
+export default ItemListContainer

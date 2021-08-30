@@ -1,0 +1,48 @@
+[
+    {
+        "id": "1", 
+        "title": "Cobre", 
+        "description": "Material codiciado", 
+        "price": 120, 
+        "pictureURL": "https://m.economictimes.com/thumb/msid-80670719,width-1200,height-900,resizemode-4,imgsize-180806/copper.jpg",
+        "category" : "1",
+        "stock" : 9
+        
+    },
+    {
+        "id": "2", 
+        "title": "Aluminio", 
+        "description": "Material escaso", 
+        "price": 70, 
+        "pictureURL": "https://d1ymz67w5raq8g.cloudfront.net/Pictures/1024x536/5/6/4/511564_shutterstock_367753157.jpg",
+        "category" : "1",
+        "stock" : 3
+    },
+    {
+        "id": "3", 
+        "title": "Oro", 
+        "description": "El mejor conductor conocido actualmente", 
+        "price": 170, 
+        "pictureURL": "https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/gold-nuggets-7636265_1x1.jpg",
+        "category" : "1",
+        "stock" : 4
+    },
+    {
+        "id": "4", 
+        "title": "Plata", 
+        "description": "Dificil de encontrar en mineria", 
+        "price": 100, 
+        "pictureURL": "https://a.c-dn.net/c/content/dam/publicsites/igcom/uk/images/ContentImage/pages/silver-trading-page-header.jpg",
+        "category" : "2",
+        "stock" : 7
+    },
+    {
+        "id": "5", 
+        "title": "Diamante", 
+        "description": "Material mas codiciado del mundo", 
+        "price": 1120, 
+        "pictureURL": "https://www.techexplorist.com/wp-content/uploads/2019/09/diamond.jpg",
+        "category" : "2",
+        "stock" : 1
+    }
+]

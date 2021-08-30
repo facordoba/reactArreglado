@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#buttons{
+    display: flex;
+    width: 20vh;
+}
+#counter{
+    display: flex;
+    flex-direction: column;
+    width: 18vh;
+}
+#saveButton{
+    margin: 1vh;
+}
+img{
+    width: 25vh;
+}
+#itemBox{
+    display: flex;
+    flex-direction: row;
+}
+#item{
+    margin: 2vh;
+}
+a{
+    text-decoration: none;
+}
