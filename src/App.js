@@ -8,19 +8,24 @@ import PruebaState from "./COMPONENTS/PruebaState"
 import ItemDetailContainer from "./COMPONENTS/ItemDetailContainer"
 import {BrowserRouter, Route} from "react-router-dom"
 import Cart from "./COMPONENTS/Cart"
+import CustomProvider from "./COMPONENTS/CartContext"
+
 
 
 const App = ()=>{
 
     return(
-        <BrowserRouter>
-            <NavBar/>
-            <Route path="/" exact>  <ItemListContainer/>  </Route>
-            <Route path="/category/:id" exact>  <ItemListContainer/>  </Route>
-            <Route path="/item/:id" exact>   <ItemDetailContainer/>   </Route>
-            <Route path="/cart" exact>   <Cart/>   </Route>
+        <CustomProvider>
 
-        </BrowserRouter>
+            <BrowserRouter>
+                <NavBar/>
+                <Route path="/" exact>  <ItemListContainer/>  </Route>
+                <Route path="/category/:id" exact>  <ItemListContainer/>  </Route>
+                <Route path="/item/:id" exact>   <ItemDetailContainer/>   </Route>
+                <Route path="/cart" exact>   <Cart/>   </Route>
+
+            </BrowserRouter>
+        </CustomProvider>
     )
 }
 export default App

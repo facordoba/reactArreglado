@@ -1,15 +1,25 @@
 import { useParams } from "react-router"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import Counter from "./Counter"
 import { Link } from "react-router-dom"
+import {contexto} from "./CartContext"
 const ItemDetail = ({itemDetail})=>{
     const params = useParams()
-    const [onAddValue, setOnAddValue]=useState()
-    console.log(params.id)
+    const [cantidad, setCantidad]=useState()
+
+
+
+    const {addItem} = useContext(contexto)
+
     const onAdd =(cantidad)=>{
-        setOnAddValue(cantidad)
+        const data = {
+            item : itemDetail,
+            quantity : cantidad
+        }
+        addItem(data)
+        setCantidad(cantidad)
     }
-    if(onAddValue == undefined){
+    if(cantidad == undefined){
 
         return (
             <div>
@@ -26,7 +36,7 @@ const ItemDetail = ({itemDetail})=>{
                 <p>id: {itemDetail.id}</p>
                 <p>description: {itemDetail.description}</p>
                 <p>price: {itemDetail.price}</p>
-                <Link to="/cart">   <button>Terminar mi compra</button>   </Link>
+                <Link to="/cart">   <button onClick={addItem}>Terminar mi compra</button>   </Link>
                 
             </div>
         )

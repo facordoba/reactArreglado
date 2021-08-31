@@ -3,8 +3,8 @@ import { useState, useEffect } from "react"
 import ItemList from "./ItemList"
 import { useParams } from "react-router"
 const ItemListContainer = ()=>{
+
     const params = useParams()
-    console.log(params.id)
     const [item, setItem]=useState([])
     useEffect(()=>{
         const promise = new Promise(  (resolve, reject)=>{

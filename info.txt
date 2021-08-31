@@ -75,3 +75,41 @@ const ItemListContainer = ()=>{
     )
 }
 export default ItemListContainer
+
+
+
+
+
+
+
+
+----------Ejemplo destructoring con context
+
+    const jotaa = useContext(contexto)
+    console.log(jotaa)
+
+    return (
+            <div>
+                <p>id: {itemDetail.id}</p>
+                <p>description: {itemDetail.description}</p>
+                <p>price: {itemDetail.price}</p>
+                <Link to="/cart">   <button onClick={jotaa.cambiarEstado}>Terminar mi compra</button>   </Link>
+                
+            </div>
+        )
+
+
+    [o]
+
+    const {cambiarEstado} = useContext(contexto)
+
+
+    return (
+            <div>
+                <p>id: {itemDetail.id}</p>
+                <p>description: {itemDetail.description}</p>
+                <p>price: {itemDetail.price}</p>
+                <Link to="/cart">   <button onClick={cambiarEstado}>Terminar mi compra</button>   </Link>
+                
+            </div>
+        )
