@@ -22,6 +22,7 @@ const ItemListContainer = ()=>{
             promise.then(p=>setItem(p.filter(e=>e.category == 2)))
         }
     },[params.id])
+    sessionStorage.clear()
     return (
         <div>
             <ItemList propItem={item}/>

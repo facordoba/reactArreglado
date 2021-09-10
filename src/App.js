@@ -13,7 +13,7 @@ import CustomProvider from "./COMPONENTS/CartContext"
 
 
 const App = ()=>{
-
+    
     return(
         <CustomProvider>
 

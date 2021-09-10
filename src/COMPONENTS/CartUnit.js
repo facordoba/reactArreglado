@@ -3,7 +3,7 @@ import { contexto } from "./CartContext"
 const CartUnit = ({eachUnit})=>{
     const {removeItem}=useContext(contexto)
 
-    console.log(eachUnit)
+    /* console.log(eachUnit) */
 
     const onDelete = ()=>{
         removeItem(eachUnit.item.id)
