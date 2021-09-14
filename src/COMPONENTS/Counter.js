@@ -1,5 +1,4 @@
 import { useState} from "react"
-import Prueba from "./Prueba"
 const Counter = ({initial, stock, onAdd})=>{
 
 
@@ -32,7 +31,7 @@ const Counter = ({initial, stock, onAdd})=>{
                 <p>{number}</p>
                 <button onClick={remove}>Restar</button>
             </div>
-            <button id="saveButton" onClick={stateUp}>Comprar</button>
+            <button id="saveButton" onClick={stateUp}>OK</button>
         </div>
         
     )
