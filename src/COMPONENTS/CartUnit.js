@@ -9,7 +9,7 @@ const CartUnit = ({eachUnit})=>{
     return (
         <div id="cartUnitDiv">
             <p>Producto: {eachUnit.item.title}</p>
-            <p>Precio: {eachUnit.item.price}</p>
+            <p>Precio: ${eachUnit.item.price}</p>
             <p>Cantidad: {eachUnit.quantity}</p>
             <button onClick={onDelete}>Borrar</button>
         </div>

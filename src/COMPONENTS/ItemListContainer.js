@@ -7,10 +7,8 @@ import { contexto } from "./CartContext"
 const ItemListContainer = ()=>{
 
     const params = useParams()
-
     const { item, setItem } = useContext(contexto)
     useEffect(()=>{
-        
         const db = firestore
         const collection = db.collection( "itemColection" )
         
@@ -62,7 +60,7 @@ const ItemListContainer = ()=>{
     },[params.id])
     
     return (
-        <div>
+        <div id="itemContainer">
             <ItemList propItem={item}/>
         </div>
     )

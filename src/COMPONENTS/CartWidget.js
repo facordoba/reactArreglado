@@ -5,15 +5,15 @@ const CartWidget = ()=>{
     const {agregados}=useContext(contexto)
     if(agregados == 0 ){
         return (
-            <Link to="/cart"><p>Carrito</p></Link>
+            <Link to="/cart">
+            <button id="buttonCarrito">Carrito</button>
+            </Link>
         )
     }
     else{
         return (
             <Link to="/cart">
-            <div>
-                <p>Items en el carrito {agregados}</p>
-            </div>
+            <button id="buttonCarrito">Items: {agregados}</button>
             </Link>
         )
     }

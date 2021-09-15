@@ -14,20 +14,19 @@ const ItemDetail = ({itemDetail})=>{
     if(cantidad == undefined){
 
         return (
-            <div>
+            <div id="itemDetail">
                 <p>Descripcion: {itemDetail.description}</p>
-                <p>Precio: {itemDetail.price}</p>
+                <p>Precio: ${itemDetail.price}</p>
                 <Counter initial={0} stock={itemDetail.stock} onAdd={onAdd}/>
             </div>
         )
     }
     else{
         return (
-            <div>
+            <div id="itemDetail">
                 <p>Descripcion: {itemDetail.description}</p>
-                <p>Precio: {itemDetail.price}</p>
-                <Link to="/cart">   <button>Agregar al carrito</button>   </Link>
-                
+                <p>Precio: ${itemDetail.price}</p>
+                <Link to="/">   <button id="volverMenu">Volver al menu</button>   </Link>
             </div>
         )
 

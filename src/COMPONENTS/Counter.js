@@ -1,8 +1,6 @@
 import { useState} from "react"
 const Counter = ({initial, stock, onAdd})=>{
 
-
-
     const [number, setNumber] = useState(initial)
 
     const add = ()=>{
@@ -27,11 +25,11 @@ const Counter = ({initial, stock, onAdd})=>{
     return (
         <div id="counter">
             <div id="buttons">
-                <button onClick={add}>Sumar</button>
+                <button onClick={add}>+</button>
                 <p>{number}</p>
-                <button onClick={remove}>Restar</button>
+                <button onClick={remove}>-</button>
             </div>
-            <button id="saveButton" onClick={stateUp}>OK</button>
+            <button id="saveButton" onClick={stateUp}>Agregar al carrito</button>
         </div>
         
     )

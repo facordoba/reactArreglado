@@ -1,7 +1,6 @@
 import firebase from "firebase/app"
 import "firebase/firestore"
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyCCHYCSyrg_USDYlS7-aGtMQhYC4YP_8Ts",
   authDomain: "facundo-c13ee.firebaseapp.com",
